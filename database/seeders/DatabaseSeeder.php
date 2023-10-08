@@ -2,7 +2,10 @@
 
 namespace Database\Seeders;
 
+
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Database\Seeders\ScheduleSeeder;
+use Database\Seeders\SubjectSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,6 +25,9 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             UserSedeer::class,
+            SubjectSeeder::class,
+            ScheduleSeeder::class,
+
         ]);
     }
 }

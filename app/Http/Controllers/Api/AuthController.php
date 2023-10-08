@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Validation\ValidationException;
 
@@ -45,7 +45,7 @@ class AuthController extends Controller
         $token = $user->createToken('api-token')->plainTextToken;
         return response()->json([
             'jwt-token' => $token,
-            'user' => $user,
+            'user' => new UserResource($user),
         ]);
     }
 
