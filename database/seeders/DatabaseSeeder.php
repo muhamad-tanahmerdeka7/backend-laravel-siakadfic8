@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+
 use Database\Seeders\ScheduleSeeder;
 use Database\Seeders\SubjectSeeder;
 use Illuminate\Database\Seeder;
@@ -27,6 +29,9 @@ class DatabaseSeeder extends Seeder
             UserSedeer::class,
             SubjectSeeder::class,
             ScheduleSeeder::class,
+            KhsSeeder::class,
+            AbsensiMatakulSeeder::class,
+            StudentScheduleSeeder::class,
 
         ]);
     }

@@ -27,6 +27,27 @@
 
                 </ul>
             </li>
+            {{-- menampilkan Subject  --}}
+            <li class="nav-item dropdown ">
+                <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i><span>Subject</span></a>
+                <ul class="dropdown-menu ">
+                    <li>
+                        <a class="nav-link" href="{{ route('subject.index') }}">Subject List</a>
+                    </li>
+                </ul>
+            </li>
+            {{-- menampilkan Schedule  --}}
+            <li class="nav-item dropdown ">
+                <a href="#" class="nav-link has-dropdown"><i
+                        class="far fa-file-alt"></i><span>Schedules</span></a>
+                <ul class="dropdown-menu ">
+                    <li>
+                        <a class="nav-link" href="{{ route('schedule.index') }}">Schedule List</a>
+                    </li>
+                </ul>
+            </li>
+
+
 
     </aside>
 </div>

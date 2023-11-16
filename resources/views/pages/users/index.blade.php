@@ -40,7 +40,7 @@
                             <div class="card-body">
 
                                 <div class="float-right">
-                                    <form method="GET", action="{{ route('user.index') }}">
+                                    <form method="GET" action="{{ route('user.index') }}">
                                         <div class="input-group">
                                             <input type="text" class="form-control" placeholder="Search" name="name">
                                             <div class="input-group-append">
@@ -56,6 +56,7 @@
                                     <table class="table-striped table">
                                         <tr>
 
+                                            <th>#</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>phone</th>
@@ -67,6 +68,7 @@
 
                                         @foreach ($users as $user)
                                             <tr>
+                                                <td>{{ $loop->iteration }}</td>
 
                                                 <td>
                                                     {{ $user->name }}

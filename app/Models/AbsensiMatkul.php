@@ -2,42 +2,39 @@
 
 namespace App\Models;
 
-//use App\Models\Subject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Schedule extends Model
+class AbsensiMatkul extends Model
 {
-
-
-
     use HasFactory;
-
     protected $fillable = [
-
-        'subject_id',
-        // 'student_id',
-
-        'hari',
-        'jam_mulai',
-        'jam_selesai',
-        'ruangan',
+        'schedule_id',
+        'student_id',
         'kode_absensi',
         'tahun_akademik',
-        'smester',
+        'semester',
+        'pertemuan',
+        'status',
+        'keterangan',
+        'latitude',
+        'longitude',
+        'nilai',
         'created_by',
         'updated_by',
-
 
 
     ];
 
 
-    public function subject()
-    {
-        return $this->belongsTo(Subject::class);
-    }
 
+
+
+    //belongsto
+    public function schedule()
+    {
+        return $this->belongsTo(Schedule::class);
+    }
     public function student()
     {
         return $this->belongsTo(User::class);
